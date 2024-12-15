@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book professional grooming services at The Barbershop.">
+    <title>Barbershop Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" style="background-image: url('images/barbershop_bg.jpg'); background-size: cover; background-position: center; color: white;">
+        <nav class="navbar" role="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+        </nav>
+        <div class="header-content" id="home">
+            <h1>Welcome to The Barbershop</h1>
+            <p>Professional grooming services for men</p>
+            <button onclick="window.location.href='#booking'">Book an Appointment</button>
+        </div>
+    </header>
+    
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service">
+                <img src="images/haircut.jpg" alt="Haircut" class="service-img">
+                <h3>Haircut</h3>
+                <p>Get a fresh and stylish haircut tailored to your preference.</p>
+            </div>
+            <div class="service">
+                <img src="images/shaving.jpg" alt="Shaving" class="service-img">
+                <h3>Shaving</h3>
+                <p>Experience a clean, smooth shave from our experts.</p>
+            </div>
+            <div class="service">
+                <img src="images/beard_trim.jpg" alt="Beard Trim" class="service-img">
+                <h3>Beard Trim</h3>
+                <p>Maintain a well-groomed beard with our professional trim.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="prices" class="prices">
+        <h2>Prices</h2>
+        <div class="prices-grid">
+            <div class="price-item">
+                <h3>Haircut</h3>
+                <p>30MAD</p>
+                <span>Classic & Stylish</span>
+            </div>
+            <div class="price-item">
+                <h3>Shaving</h3>
+                <p>10MAD</p>
+                <span>Smooth Finish</span>
+            </div>
+            <div class="price-item">
+                <h3>Beard Trim</h3>
+                <p>12MAD</p>
+                <span>Perfectly Groomed</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="booking" class="booking-section">
+        <h2>Book an Appointment</h2>
+        <form action="booking.php" method="POST" class="booking-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+                <option value="Haircut">Haircut</option>
+                <option value="Shaving">Shaving</option>
+                <option value="Beard Trim">Beard Trim</option>
+            </select>
+            
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2024 The Barbershop. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
